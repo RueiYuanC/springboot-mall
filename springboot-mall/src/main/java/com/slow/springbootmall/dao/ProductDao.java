@@ -7,5 +7,5 @@ public interface ProductDao {
     Product getProductById(Integer productId);
     Integer createProduct(ProductRequset productRequset);
     void updateProduct(Integer productId,ProductRequset productRequset);
-
+    void deleteProductById(Integer productId);
 }

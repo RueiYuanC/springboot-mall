@@ -8,4 +8,6 @@ public interface ProductService {
     Integer createProduct(ProductRequset productRequset);
 
     void updateProduct(Integer productId,ProductRequset productRequset);
+
+    void deleteProductById(Integer productId);
 }
