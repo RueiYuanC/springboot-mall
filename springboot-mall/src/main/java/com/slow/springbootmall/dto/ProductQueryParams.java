@@ -6,7 +6,27 @@ public class ProductQueryParams {
     private ProductCategory category;
     private String search;
     private String orderBy;
+
+    public Integer getOffset() {
+        return offset;
+    }
+
+    public void setOffset(Integer offset) {
+        this.offset = offset;
+    }
+
     private String sort;
+
+    public Integer getLimit() {
+        return limit;
+    }
+
+    public void setLimit(Integer limit) {
+        this.limit = limit;
+    }
+
+    private Integer limit;
+    private Integer offset;
 
     public String getOrderBy() {
         return orderBy;
