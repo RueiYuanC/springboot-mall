@@ -4,7 +4,7 @@ import com.slow.springbootmall.constant.ProductCategory;
 
 import javax.validation.constraints.NotNull;
 
-public class ProductRequset {
+public class ProductRequest {
     @NotNull
     private String  productName;
     @NotNull

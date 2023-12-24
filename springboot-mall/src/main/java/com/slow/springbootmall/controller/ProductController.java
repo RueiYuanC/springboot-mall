@@ -2,7 +2,7 @@ package com.slow.springbootmall.controller;
 
 import com.slow.springbootmall.constant.ProductCategory;
 import com.slow.springbootmall.dto.ProductQueryParams;
-import com.slow.springbootmall.dto.ProductRequset;
+import com.slow.springbootmall.dto.ProductRequest;
 import com.slow.springbootmall.model.Product;
 import com.slow.springbootmall.service.ProductService;
 import com.slow.springbootmall.util.Page;
@@ -67,14 +67,14 @@ public class ProductController {
     }
 
     @PostMapping("/products")
-    public ResponseEntity<Product> createProduct(@RequestBody @Valid ProductRequset productRequset){
+    public ResponseEntity<Product> createProduct(@RequestBody @Valid ProductRequest productRequset){
        Integer productId=productService.createProduct(productRequset);
        Product product=productService.getProductById(productId);
        return  ResponseEntity.status(HttpStatus.CREATED).body(product);
     }
 
     @PutMapping("/products/{productId}")
-    public ResponseEntity<Product> updateProduct(@PathVariable Integer productId,@RequestBody @Valid ProductRequset productRequset){
+    public ResponseEntity<Product> updateProduct(@PathVariable Integer productId,@RequestBody @Valid ProductRequest productRequset){
 
         Product product=productService.getProductById(productId);
         if(product==null){

@@ -2,7 +2,7 @@ package com.slow.springbootmall.service.impl;
 
 import com.slow.springbootmall.dao.ProductDao;
 import com.slow.springbootmall.dto.ProductQueryParams;
-import com.slow.springbootmall.dto.ProductRequset;
+import com.slow.springbootmall.dto.ProductRequest;
 import com.slow.springbootmall.model.Product;
 import com.slow.springbootmall.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,12 +31,12 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Integer createProduct(ProductRequset productRequset) {
+    public Integer createProduct(ProductRequest productRequset) {
         return productDao.createProduct(productRequset);
     }
 
     @Override
-    public void updateProduct(Integer productId, ProductRequset productRequset) {
+    public void updateProduct(Integer productId, ProductRequest productRequset) {
         productDao.updateProduct(productId,productRequset);
     }
 
